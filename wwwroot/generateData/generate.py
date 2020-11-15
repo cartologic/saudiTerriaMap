@@ -1,18 +1,17 @@
 import requests, json, os
 
-# Fetch and return all layers objects
-def fetchData():
-    response = requests.get("http://mapsaudi.com/api/layers/")
+# Fetch data from the API.
+def fetchData(resource):
+    response = requests.get("http://mapsaudi.com/api/{}/".format(resource))
     data = response.json()["objects"]
     return data
-
-allLayers = fetchData()
 
 def filterCheck(category, obj):
     return "category__gn_description" in obj and obj["category__gn_description"] == category
 
-def filterByCategory(category, objects=allLayers):
-    categoryList = list(filter((lambda obj: filterCheck(category, obj)), objects))
+def filterByCategory(category):
+    allLayers = fetchData('layers')
+    categoryList = list(filter((lambda obj: filterCheck(category, obj)), allLayers))
     return categoryList
 
 # Open Data categories
@@ -21,23 +20,23 @@ agricultureAndFishingList = filterByCategory("Agriculture and Fishing")
 healthList = filterByCategory("Health")
 tradeList = filterByCategory("Trade (Internal and External)")
 
-transportList = filterByCategory("Transport and Communications")
 educationAndTrainingList = filterByCategory("Education and Training")
 weatherConditionsList = filterByCategory("Weather Conditions")
 pricesAndIndicesList = filterByCategory("Prices and Indices")
 
 economyAndPlanningList = filterByCategory("Economy and Planning")
-monitoringAgenciesList = filterByCategory("Monitoring Agencies")
 populationAndHousingList = filterByCategory("Population and Housing")
 industryList = filterByCategory("Industry")
 
 socialInsuranceList = filterByCategory("Social Insurance")
 energyAndWaterList = filterByCategory("Energy and Water")
 laborMarketList = filterByCategory("Labor Market")
+environmentList = filterByCategory("Environment")
 openDataMigrationList = filterByCategory("Open Data Migration Group")
 
 gccList = filterByCategory("Arab Gulf Cooperation Council (GCC)")
 financialAndIndustryList = filterByCategory("Accounts Financial Monetary Affairs and Industry")
+citcList = filterByCategory("Communications and Information Technology Commission")
 
 
 def getObjectKeys(object):
@@ -57,24 +56,23 @@ newAgricultureAndFishingList = list(map(getObjectKeys, agricultureAndFishingList
 newHealthList = list(map(getObjectKeys, healthList))
 newTradeList = list(map(getObjectKeys, tradeList))
 
-newTransportList = list(map(getObjectKeys, transportList))
 newEducationAndTrainingList = list(map(getObjectKeys, educationAndTrainingList))
 newWeatherConditionsList = list(map(getObjectKeys, weatherConditionsList))
 newPricesAndIndicesList = list(map(getObjectKeys, pricesAndIndicesList))
 
 newEconomyAndPlanningList = list(map(getObjectKeys, economyAndPlanningList))
-newMonitoringAgenciesList = list(map(getObjectKeys, monitoringAgenciesList))
 newPopulationAndHousingList = list(map(getObjectKeys, populationAndHousingList))
 newIndustryList = list(map(getObjectKeys, industryList))
 
 newSocialInsuranceList = list(map(getObjectKeys, socialInsuranceList))
 newEnergyAndWaterList = list(map(getObjectKeys, energyAndWaterList))
 newLaborMarketList = list(map(getObjectKeys, laborMarketList))
+newEnvironmentList = list(map(getObjectKeys, environmentList))
 newOpenDataMigrationList = list(map(getObjectKeys, openDataMigrationList))
 
 newGccList = list(map(getObjectKeys, gccList))
 newFinancialAndIndustryList = list(map(getObjectKeys, financialAndIndustryList))
-
+newCITCList = list(map(getObjectKeys, citcList))
 
 terriaCatalogConfig = {
     "homeCamera": {
@@ -119,13 +117,6 @@ terriaCatalogConfig = {
                     "items": newTradeList
                 },
                 {
-                    "name": "Transport and Communications",
-                    "type": "group",
-                    "isEnabled": True,
-                    "zoomOnEnable": True,
-                    "items": newTransportList
-                },
-                {
                     "name": "Education and Training",
                     "type": "group",
                     "isEnabled": True,
@@ -152,13 +143,6 @@ terriaCatalogConfig = {
                     "isEnabled": True,
                     "zoomOnEnable": True,
                     "items":newEconomyAndPlanningList
-                },
-                {
-                    "name": "Monitoring Agencies",
-                    "type": "group",
-                    "isEnabled": True,
-                    "zoomOnEnable": True,
-                    "items": newMonitoringAgenciesList
                 },
                 {
                     "name": "Population and Housing",
@@ -196,6 +180,13 @@ terriaCatalogConfig = {
                     "items": newLaborMarketList
                 },
                 {
+                  "name": "Environment",
+                  "type": "group",
+                  "isEnabled": True,
+                  "zoomOnEnable": True,
+                  "items": newEnvironmentList
+                },
+                {
                     "name": "Open Data Migration Group",
                     "type": "group",
                     "isEnabled": True,
@@ -215,6 +206,13 @@ terriaCatalogConfig = {
                     "isEnabled": True,
                     "zoomOnEnable": True,
                     "items": newFinancialAndIndustryList
+                },
+                {
+                    "name": "Communications and Information Technology Commission",
+                    "type": "group",
+                    "isEnabled": True,
+                    "zoomOnEnable": True,
+                    "items": newCITCList
                 }
             ]
         }
