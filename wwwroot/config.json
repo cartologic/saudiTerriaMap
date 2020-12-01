@@ -11,10 +11,10 @@
       "text": "Disclaimer: This map must not be used for navigation or precise spatial analysis",
       "url": ""
     },
-    "appName": "KSA | Terria Map",
+    "appName": "MapSaudi | Terria Map",
     "brandBarElements": [
       "",
-      "<a target=\"_blank\" href=\"http://mapsaudi.com\"><img src=\"images/datagovsa.png\" title=\"KSA | Open Data\" /></a>",
+      "<a target=\"_blank\" href=\"http://mapsaudi.com\"><img src=\"images/mapsaudi-logo.png\" title=\"MapSaudi\" /></a>",
       ""
     ],
     "supportEmail": "info@cartologic.com",
