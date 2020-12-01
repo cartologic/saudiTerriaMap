@@ -1,5 +1,4 @@
-Saudi Terria Map
-==========
+# Saudi Terria Map | [Live demo](http://mapsaudi.com/saudi-terriamap/)
 
 ![Terria logo](terria-logo.png "Terria logo")
 
