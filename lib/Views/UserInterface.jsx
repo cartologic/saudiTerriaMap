@@ -12,8 +12,10 @@ import SplitPoint from "terriajs/lib/ReactViews/SplitPoint";
 import StandardUserInterface from "terriajs/lib/ReactViews/StandardUserInterface/StandardUserInterface.jsx";
 import version from "../../version";
 import CovidChartViewer from "./CovidChartViewer/CovidChartViewer";
+import ToggleLanguage from "./ToggleLanguage";
 
 import "./global.scss";
+import "../Models/i18n";
 
 function loadAugmentedVirtuality(callback) {
   require.ensure(
@@ -37,6 +39,9 @@ export default function UserInterface(props) {
         {/* <RelatedMaps viewState={props.viewState} /> */}
         <CovidChartViewer viewState={props.viewState} />
         {/* <MenuItem caption="About" href="about.html" key="about-link" /> */}
+      </Menu>
+      <Menu>
+        <ToggleLanguage />
       </Menu>
       <Nav>
         <MeasureTool terria={props.viewState.terria} key="measure-tool" />
