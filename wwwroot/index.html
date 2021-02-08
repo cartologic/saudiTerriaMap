@@ -27,5 +27,14 @@
 
 <div id='ui'></div>
   <script src="build/TerriaMap.js"></script>
+  <script>
+    const code = localStorage.getItem('i18nextLng');
+    if (code === 'ar') {
+      document.title = 'المملكة العربية السعودية | خريطة تريا';
+    }
+    else {
+      document.title = 'KSA | Terria Map';
+    }
+  </script>
 </body>
 </html>
