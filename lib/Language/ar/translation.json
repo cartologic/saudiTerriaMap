@@ -3,6 +3,11 @@
     "text": "English",
     "title": "Change to English"
   },
+  "covid19-charts": {
+    "saudi-covid-statistics": "إحصائيات جائحة كورونا-19 السعودية",
+    "saudi-covid-charts": "فتح مخططات جائحة كورونا-19 السعودية",
+    "saudi-covid-description": "هذا الرسم البياني يبين بعض الإحصائيات حول حالات جائحة كورونا-19 في السعودية."
+  },
   "general": {
     "close": "غلق",
     "open": "فتح",

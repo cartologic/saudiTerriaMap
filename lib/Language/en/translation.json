@@ -3,6 +3,11 @@
     "text": "العربية",
     "title": "التغيير للعربية"
   },
+  "covid19-charts": {
+    "saudi-covid-statistics": "Saudi COVID-19 Statistics",
+    "saudi-covid-charts": "See Saudi COVID-19 charts",
+    "saudi-covid-description": "This graph visualize some statistics about COVID-19 cases in Saudi Arabia."
+  },
   "general": {
     "close": "Close",
     "open": "Open",
