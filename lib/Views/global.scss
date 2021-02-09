@@ -46,6 +46,15 @@ body {
     }
   }
 
+  .tjs-full_screen_button__btn span {
+    align-items: center;
+  }
+
+  .tjs-full_screen_button__btn span svg {
+    margin-left: 5px;
+    margin-right: unset;
+  }
+
   /* RTL styles */
   @media (min-width: 992px) {
     .tjs-standard-user-interface__featureInfo {
@@ -319,6 +328,13 @@ body {
   .tjs-story-panel__previousBtn {
     [dir="rtl"] & {
       transform: rotate(180deg);
+    }
+  }
+
+  .tjs-full_screen_button__btn span svg {
+    [dir="rtl"] & {
+      margin-right: 5px;
+      margin-left: unset;
     }
   }
 }
