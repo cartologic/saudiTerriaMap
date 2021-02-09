@@ -14,6 +14,10 @@ body {
     }
   }
 
+  .tjs-branding__branding {
+    margin: 0px 3px;
+  }
+
   .tjs-branding__branding img {
     display: block;
     margin: auto;
@@ -53,6 +57,20 @@ body {
   .tjs-full_screen_button__btn span svg {
     margin-left: 5px;
     margin-right: unset;
+  }
+
+  .tjs-_buttons__btn-grey {
+    height: 60px;
+  }
+
+  .tjs-setting-panel__viewer-selector,
+  .tjs-setting-panel__base-map-selector,
+  .tjs-help-panel__viewer-selector {
+    padding: 5px;
+  }
+
+  .tjs-panel__heading {
+    margin-top: 15px;
   }
 
   /* RTL styles */
@@ -142,6 +160,10 @@ body {
   }
 
   // Base Maps item
+  .tjs-panel__inner-close-btn {
+    left: 5px;
+  }
+
   .tjs-setting-panel__dropdown-inner {
     [dir="rtl"] & {
       right: -232px;
@@ -356,6 +378,22 @@ body {
     [dir="rtl"] & {
       right: unset;
       left: 5px;
+    }
+  }
+
+  .tjs-mobile-menu__mobile-nav--hidden {
+    [dir="rtl"] & {
+      right: -9999px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    [dir="rtl"] & {
+      .tjs-map-column__feedback-button-wrapper,
+      .tjs-feedback-form__form {
+        left: 20px;
+        right: unset;
+      }
     }
   }
 }
