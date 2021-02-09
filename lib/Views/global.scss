@@ -337,4 +337,25 @@ body {
       margin-left: unset;
     }
   }
+
+  .tjs-mobile-header__group-left {
+    [dir="rtl"] & {
+      left: unset;
+      right: 5px;
+    }
+  }
+
+  .tjs-mobile-header__btnMenu {
+    [dir="rtl"] & {
+      margin-right: unset;
+      margin-left: 3px;
+    }
+  }
+
+  .tjs-mobile-header__group-right {
+    [dir="rtl"] & {
+      right: unset;
+      left: 5px;
+    }
+  }
 }
