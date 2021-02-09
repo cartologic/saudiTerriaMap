@@ -209,6 +209,23 @@ body {
     }
   }
 
+  @media (max-width: 420px) {
+    .tjs-setting-panel__dropdown-inner,
+    .tjs-share-panel__dropdown-inner,
+    .tjs-help-panel__dropdown-inner,
+    .tm-related-maps__dropdown-inner {
+      [dir="rtl"] & {
+        right: 0px;
+      }
+    }
+
+    .tjs-panel__caret {
+      [dir="rtl"] & {
+        right: 15px;
+      }
+    }
+  }
+
   /* Catalog */
   @media (min-width: 992px) {
     .tjs-explorer-window__modal-wrapper {
