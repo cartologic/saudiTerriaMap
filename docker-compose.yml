@@ -1,0 +1,11 @@
+version: '3'
+services:
+  terria-map:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3030:3030"
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
