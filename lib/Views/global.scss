@@ -29,4 +29,152 @@ body {
       background-color: #222831;
     }
   }
+
+  .tjs-feedback-form__action {
+    margin-top: 20px;
+  }
+
+  .tjs-feedback-button__btnFeedback span {
+    margin: 5px;
+  }
+
+  .tjs-full_screen_button__btn svg {
+    &:focus,
+    &:active,
+    &:hover {
+      fill: #ffffff;
+    }
+  }
+
+  /* RTL styles */
+  @media (min-width: 992px) {
+    .tjs-standard-user-interface__featureInfo {
+      [dir="rtl"] & {
+        right: 372px;
+        top: 62px;
+        left: 96px;
+        bottom: 0;
+      }
+    }
+  }
+
+  .tjs-full_screen_button__minifiedFullscreenBtnWrapper {
+    [dir="rtl"] & {
+      right: 348px;
+      left: 0;
+    }
+  }
+
+  .tjs-standard-user-interface__showWorkbenchButtonisVisible {
+    [dir="rtl"] & {
+      left: 0;
+      right: 16px;
+    }
+  }
+
+  .tjs-side-panel__button svg {
+    [dir="rtl"] & {
+      left: auto;
+    }
+  }
+
+  .tjs-side-panel__uploadData {
+    [dir="rtl"] & {
+      margin-left: 0px;
+      margin-right: 5px;
+    }
+  }
+
+  .tjs-menu-bar__menu-area {
+    [dir="rtl"] & {
+      right: auto;
+      left: 20px;
+    }
+    [dir="ltr"] & {
+      right: 20px;
+      left: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .tjs-map-navigation__map-navigation {
+      [dir="rtl"] & {
+        right: auto;
+        left: 16px;
+      }
+    }
+  }
+
+  .tjs-map-navigation__navs {
+    [dir="rtl"] & {
+      direction: initial;
+    }
+  }
+
+  .tjs-workbench-item__header,
+  .tjs-viewing-controls__control,
+  .tjs-legend__legend {
+    [dir="rtl"] & {
+      padding: 0;
+    }
+  }
+
+  .tjs-style-selector-section__style-selector svg {
+    [dir="rtl"] & {
+      float: left;
+    }
+  }
+
+  .tjs-feedback-form__btnSubmit {
+    [dir="rtl"] & {
+      margin-left: auto;
+      margin-right: 10px;
+    }
+  }
+
+  // Base Maps item
+  .tjs-setting-panel__dropdown-inner {
+    [dir="rtl"] & {
+      right: -232px;
+    }
+  }
+
+  .tjs-panel__caret:first-child {
+    [dir="rtl"] & {
+      right: 267px;
+    }
+  }
+
+  // Share item
+  .tjs-share-panel__dropdown-inner {
+    [dir="rtl"] & {
+      right: -373px;
+    }
+  }
+
+  .tjs-panel__caret:nth-of-type(2) {
+    [dir="rtl"] & {
+      right: 412.5px;
+    }
+  }
+
+  // Help item
+  .tjs-help-panel__dropdown-inner {
+    [dir="rtl"] & {
+      right: -377px;
+    }
+  }
+
+  // COVID-19 item
+  .tm-related-maps__dropdown-inner {
+    [dir="rtl"] & {
+      right: -408px;
+    }
+  }
+
+  .tm-related-maps__dropdown-inner .tjs-panel__caret {
+    [dir="rtl"] & {
+      right: 515px;
+    }
+  }
 }
