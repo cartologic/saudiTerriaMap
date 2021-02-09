@@ -177,4 +177,105 @@ body {
       right: 515px;
     }
   }
+
+  /* Catalog */
+  @media (min-width: 992px) {
+    .tjs-explorer-window__modal-wrapper {
+      [dir="rtl"] & {
+        padding-right: 380px;
+        padding-left: 30px;
+      }
+    }
+  }
+
+  .tjs-explorer-window__btn--close-modal {
+    [dir="rtl"] & {
+      left: 0;
+      right: unset;
+    }
+  }
+
+  .tjs-tabs__tab-list {
+    [dir="rtl"] & {
+      padding-right: 0px;
+    }
+  }
+
+  .tjs-tabs__tab-list__item {
+    [dir="rtl"] & {
+      float: right;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .tjs-tabs__tab-left-col {
+      [dir="rtl"] & {
+        float: right;
+      }
+    }
+  }
+
+  .tjs-data-catalog-group__btnCatalogTopLevel {
+    [dir="rtl"] & {
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  }
+
+  .tjs-data-catalog-group__btn--catalog {
+    [dir="rtl"] & {
+      text-align: right;
+    }
+  }
+
+  @media (min-width: 768px) {
+    [dir="rtl"] & {
+      .tjs-data-catalog-group__caret {
+        left: 5px;
+        right: unset;
+      }
+    }
+  }
+
+  .tjs-data-catalog-group__care {
+    [dir="rtl"] & {
+      right: unset;
+    }
+  }
+
+  .tjs-data-catalog-group__catalog-group {
+    [dir="rtl"] & {
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  }
+
+  .tjs-data-catalog-group__folder {
+    [dir="rtl"] & {
+      left: unset;
+      right: 8px;
+    }
+  }
+
+  .tjs-data-catalog-group__catalog-group--lower-level {
+    [dir="rtl"] & {
+      margin-left: unset;
+      margin-right: 20px;
+      border-left: 0;
+      border-right: 1px solid #ddd;
+    }
+  }
+
+  .tjs-data-catalog-item__btn-action {
+    [dir="rtl"] & {
+      right: unset;
+      left: 0;
+    }
+  }
+
+  .tjs-data-catalog-item__btn-catalog-item {
+    [dir="rtl"] & {
+      text-align: right;
+    }
+  }
 }
