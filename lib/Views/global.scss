@@ -278,4 +278,47 @@ body {
       text-align: right;
     }
   }
+
+  .tjs-share-panel__story-share {
+    margin-left: unset;
+    margin-right: 5px;
+  }
+
+  .tjs-story-panel__full-panel {
+    [dir="rtl"] & {
+      padding-right: 380px;
+      bottom: 90px;
+      padding-left: 50px;
+    }
+  }
+
+  .tjs-story-panel__left {
+    [dir="rtl"] & {
+      border-right: 0;
+      border-left: 1px solid #ddd;
+    }
+  }
+
+  .tjs-story-panel__right {
+    [dir="rtl"] & {
+      border-left: 0;
+      border-right: 1px solid #ddd;
+    }
+  }
+
+  .tjs-story-panel__body {
+    [dir="rtl"] & {
+      float: right;
+    }
+  }
+
+  /* Change arrows direction */
+  .tjs-full_screen_button__btn svg,
+  .tjs-full_screen_button__minified svg,
+  .tjs-story-panel__nextBtn,
+  .tjs-story-panel__previousBtn {
+    [dir="rtl"] & {
+      transform: rotate(180deg);
+    }
+  }
 }
